@@ -1,4 +1,4 @@
-# 🎬 YouTube Clone
+# 🎬 VisiOn - YouTube Clone
 
 A responsive **YouTube-style video streaming website** built using **HTML5, CSS3, and Vanilla JavaScript** — with no frameworks and no build tools required.
 
