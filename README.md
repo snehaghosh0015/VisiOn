@@ -1,8 +1,8 @@
 # 🎬 VisiOn - YouTube Clone
 
-A responsive **YouTube-style video streaming website** built using **HTML5, CSS3, and Vanilla JavaScript** — with no frameworks and no build tools required.
+A responsive **YouTube-style video streaming website** built using **HTML5, CSS3 and Vanilla JavaScript** — with no frameworks and no build tools required.
 
-This project recreates the core experience of a modern video-sharing platform, including a home feed, video watch page, search, comments, subscriptions, watch history, and personalized browser-based storage.
+This project recreates the core experience of a modern video-sharing platform, including a home feed, video watch page, search, comments, subscriptions, watch history and personalized browser-based storage.
 
 > **Note:** This is an educational project and is not affiliated with or endorsed by YouTube.
 
