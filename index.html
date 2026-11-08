@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <meta name="description" content="A YouTube clone built with plain HTML5, CSS3 and JavaScript." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="page-home">
+  <!-- Header, side menu and backdrop are rendered by js/layout.js -->
+  <header class="masthead" id="masthead"></header>
+  <div id="guide-root"></div>
+
+  <main class="main" id="main">
+    <nav class="chips" id="chips" aria-label="Categories"></nav>
+
+    <h1 class="view-title" id="viewTitle" hidden></h1>
+
+    <section class="video-grid" id="grid" aria-live="polite"></section>
+
+    <div class="empty-state" id="empty" hidden>
+      <div class="empty-icon" aria-hidden="true"></div>
+      <h2 id="emptyTitle">No videos found</h2>
+      <p id="emptyText">Try a different search or category.</p>
+      <a class="btn btn-outline" href="index.html">Back to Home</a>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

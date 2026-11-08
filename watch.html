@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch — YouTube Clone</title>
+  <meta name="description" content="Watch videos on the YouTube clone." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/watch.css" />
+</head>
+<body class="page-watch">
+  <header class="masthead" id="masthead"></header>
+  <div id="guide-root"></div>
+
+  <main class="watch" id="main">
+    <div class="watch-primary">
+      <div class="player" id="playerWrap">
+        <video id="player" controls playsinline preload="metadata"></video>
+        <div class="upnext-overlay" id="upNext" hidden>
+          <p class="upnext-label">Up next in <span id="countdown">5</span></p>
+          <a class="upnext-card" id="upNextLink" href="#">
+            <img id="upNextThumb" alt="" />
+            <span id="upNextTitle"></span>
+          </a>
+          <div class="upnext-actions">
+            <button class="btn btn-ghost" id="cancelUpNext" type="button">Cancel</button>
+            <a class="btn btn-light" id="playUpNext" href="#">Play now</a>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="watch-title" id="title"></h1>
+
+      <div class="owner-row">
+        <div class="owner">
+          <a class="avatar avatar-40" id="ownerAvatar" href="#"></a>
+          <div class="owner-text">
+            <a class="owner-name" id="ownerName" href="#"></a>
+            <span class="owner-subs" id="ownerSubs"></span>
+          </div>
+          <button class="btn btn-subscribe" id="subscribeBtn" type="button">Subscribe</button>
+        </div>
+
+        <div class="actions">
+          <div class="segmented">
+            <button class="pill-btn" id="likeBtn" type="button" aria-pressed="false" aria-label="Like this video"></button>
+            <span class="segmented-divider"></span>
+            <button class="pill-btn" id="dislikeBtn" type="button" aria-pressed="false" aria-label="Dislike this video"></button>
+          </div>
+          <button class="pill-btn" id="shareBtn" type="button"></button>
+          <button class="pill-btn" id="saveBtn" type="button" aria-pressed="false"></button>
+          <button class="pill-btn hide-sm" id="theaterBtn" type="button" aria-pressed="false"></button>
+        </div>
+      </div>
+
+      <section class="description" id="description" tabindex="0" aria-label="Video description">
+        <p class="description-stats" id="descStats"></p>
+        <div class="description-body" id="descBody"></div>
+        <button class="description-toggle" id="descToggle" type="button">...more</button>
+      </section>
+
+      <section class="comments" aria-labelledby="commentsHeading">
+        <div class="comments-header">
+          <h2 id="commentsHeading"><span id="commentCount">0</span> Comments</h2>
+          <div class="sort">
+            <button class="sort-btn" id="sortBtn" type="button" aria-haspopup="true"></button>
+            <div class="sort-menu" id="sortMenu" role="menu" hidden>
+              <button role="menuitem" data-sort="top" type="button">Top comments</button>
+              <button role="menuitem" data-sort="new" type="button">Newest first</button>
+            </div>
+          </div>
+        </div>
+
+        <form class="comment-form" id="commentForm">
+          <span class="avatar avatar-40 avatar-me" aria-hidden="true">Y</span>
+          <div class="comment-form-body">
+            <input id="commentInput" type="text" placeholder="Add a comment..." maxlength="500" autocomplete="off" aria-label="Add a comment" />
+            <div class="comment-form-actions" id="commentActions" hidden>
+              <button class="btn btn-ghost" type="button" id="commentCancel">Cancel</button>
+              <button class="btn btn-primary" type="submit" id="commentSubmit" disabled>Comment</button>
+            </div>
+          </div>
+        </form>
+
+        <ul class="comment-list" id="commentList"></ul>
+      </section>
+    </div>
+
+    <aside class="watch-secondary" aria-label="Up next">
+      <div class="autoplay-row">
+        <span>Up next</span>
+        <label class="switch">
+          <span>Autoplay</span>
+          <input type="checkbox" id="autoplayToggle" />
+          <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+        </label>
+      </div>
+      <ul class="related" id="related"></ul>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/watch.js"></script>
+</body>
+</html>
